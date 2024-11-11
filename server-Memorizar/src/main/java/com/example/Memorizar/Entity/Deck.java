@@ -18,8 +18,10 @@ public class Deck {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "deck_id")
     private Long id;
 
+    @Column(name = "deck_name")
     private String name;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
